@@ -52,6 +52,7 @@ class masterIapAction extends restBase {
 
       this.setResponse("SUCCESS");
       return {
+        "branch": "new",
         "user_id": opponentUser.userId,
         "avatar_id": opponentUser.avatarId,
         "facebook_id": opponentUser.facebookId ? opponentUser.facebookId : "",
@@ -59,7 +60,7 @@ class masterIapAction extends restBase {
         "coin": opponentUser.coin ? opponentUser.coin : 0,
         "crystal": opponentUser.crystal ? opponentUser.crystal : 0,
         "xp": opponentUser.xp ? opponentUser.xp : 0,
-        "match_data" : match_data
+        "match_data": match_data
       };
     } catch (e) {
       console.log(e);
